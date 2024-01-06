@@ -7,3 +7,35 @@
 20231218	20:01::14	d93f75a3-37b4-4f6b-983b-f27fcf0ee3be	Error: Not allowed by CORS
 20231218	20:01::14	4f0cfb7a-4009-4f3f-87d3-3ac7ba33b174	Error: Not allowed by CORS
 20231219	22:44::04	00946969-b26e-43f5-84d2-0756167b9ac6	ReferenceError: path is not defined
+20231224	23:33::56	0edabfac-041e-4ade-a75f-cf175373b08f	ReferenceError: setEmployee is not defined
+20231224	23:58::01	7f9a4631-a3be-420c-8f97-526c1bd983f6	Error: Cannot set headers after they are sent to the client
+20231225	00:00::11	b2519854-b786-4f67-9617-0e29020419a6	Error: Cannot set headers after they are sent to the client
+20231225	00:01::40	5319d5f6-15b4-45eb-8a8a-a1a220807ab2	Error: Cannot set headers after they are sent to the client
+20231225	00:02::54	24897c58-26b6-42a5-847e-c19705afa5c5	Error: Cannot set headers after they are sent to the client
+20231225	00:11::21	f4faffd8-313b-4f9a-8ca3-de6e82da7a42	Error: Cannot set headers after they are sent to the client
+20231225	00:25::23	bdf2e4c7-e6bd-4436-883e-bfb9836dbe0a	SyntaxError: Unexpected token ',', ..."irstname":,
+  "lastn"... is not valid JSON
+20231225	00:25::38	cd9be128-f247-4df5-8386-d346523dcde7	SyntaxError: Unexpected token ',', ..."irstname":,
+  "lastn"... is not valid JSON
+20231225	00:25::53	43947f8f-91f4-4eac-9bcf-5d36235d6739	SyntaxError: Unexpected token ',', ..."irstname":,
+  "lastn"... is not valid JSON
+20231225	00:25::54	fb67ff93-b8ab-43d3-8040-273cc24f5e81	SyntaxError: Unexpected token ',', ..."irstname":,
+  "lastn"... is not valid JSON
+20231225	00:26::20	2aa2b61f-11e3-498b-bb50-9ace91c546a0	Error: Cannot set headers after they are sent to the client
+20231225	00:29::58	db684d72-ea6f-4ca5-bc5c-fa3d382208b5	TypeError: Cannot read properties of undefined (reading 'id')
+20231225	00:48::01	7f3c21dd-927e-4547-aac1-dbd2c16447d5	Error: Cannot set headers after they are sent to the client
+20231225	00:48::30	9caf5946-00cc-4b04-bd63-bd5edc18230e	Error: Cannot set headers after they are sent to the client
+20231225	00:48::41	7b430d12-5e7a-4ee8-b5a1-1d4016e42ff6	Error: Cannot set headers after they are sent to the client
+20231225	00:49::28	a9b0c433-7403-4c9c-bcd3-e39dbdc5e8fd	TypeError: Cannot set properties of undefined (setting 'firstname')
+20231225	00:50::49	d89f5cc5-f548-477e-bc47-1894549e33eb	TypeError: Cannot set properties of undefined (setting 'firstname')
+20231225	00:50::51	e65d10a1-1396-46bc-b6aa-7ba3c6045b95	TypeError: Cannot set properties of undefined (setting 'firstname')
+20231225	00:51::11	bc6a3d07-37e7-4410-8edd-2c4fde40dd90	Error: Cannot set headers after they are sent to the client
+20231225	00:51::16	5d0db689-a37d-44ab-8881-02c7c83d3d64	Error: Cannot set headers after they are sent to the client
+20231225	00:51::37	e7acbac8-3dfc-4984-a632-aa65760a88f1	Error: Cannot set headers after they are sent to the client
+20231225	00:52::43	3be92020-8388-4cac-ac5d-e304b2dff7b1	TypeError: Cannot set properties of undefined (setting 'firstname')
+20231225	00:54::54	50e5e3dd-8926-4fcd-8922-1c225eea517e	TypeError: Cannot set properties of undefined (setting 'firstname')
+20231225	00:56::21	69494e45-6b6c-4065-b974-040f8714cffc	TypeError: Cannot set properties of undefined (setting 'firstname')
+20231225	01:01::43	a9b4641e-2043-4cb6-a207-d5b451fdfb7a	Error: Cannot set headers after they are sent to the client
+20231225	01:02::04	6123de7e-8bd8-4103-a2b7-2a2f189f8769	Error: Cannot set headers after they are sent to the client
+20231225	11:29::15	974b7866-6c6e-483f-a0d2-ba5104d10db7	TypeError: Cannot set properties of undefined (setting 'firstname')
+20231225	11:30::23	06e125ed-d795-4bb1-9bc8-e234debf1099	Error: Cannot set headers after they are sent to the client

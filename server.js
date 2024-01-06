@@ -6,23 +6,11 @@ const PORT = process.env.PORT || 3500; //Port setup 1st step
 const {logger} = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandlers'); //If we are importing a module which has only one component of module.exports.... then during mainfile import we should not use curly brackets it gives typeError (if we use curly brackets then it's value will be undefined)
 const cors = require('cors');
+const corsOptions = require('./config/corsOptions');
 //Custom middleware logger
 app.use(logger);
 
-//Cross Origin Resource Sharing
-const whitelist = ['https://www.google.com','http://127.0.0.1:5500','http://localhost:3500'];
-//So we have created a list of domains that is allowed to access the backend ...for these domains(origins) cors will not prevent from accessing the backend server........Now we need to create a function that will allow cors to do this
-const corsOptions = {
-    origin: (origin,callback)=>{
-        if(whitelist.indexOf(origin)!==-1 || !origin)
-        {
-            callback(null,true);
-        }else{
-            callback(new Error('Not allowed by CORS'));
-        }
-    optionsSuccessStatus: 200
-    }
-}
+
 app.use(cors(corsOptions)); //CORS a very useful third party middleware
 
 // app.get('/',(req,res)=>{
@@ -43,10 +31,8 @@ app.use(express.json());
 
 //Serve static files
 app.use('/',express.static(path.join(__dirname,'/public')));
-app.use('/subdir', express.static(path.join(__dirname,'/public')));
 
 //Routes
-app.use('/subdir', require('./routes/subdir')); //This will route any request coming for the subdirectory to the router instead of the routes that we are providing below....This will match infront of these(routes which are below)
 app.use('/',require('./routes/root'));
 app.use('/employees',require(path.join(__dirname,'routes','api','employee')));
 
