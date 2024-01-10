@@ -115,6 +115,11 @@ console.log(arra);
 // Deep Copy: Creates new, independent copies of all nested objects/arrays.
 // Creating a deep copy often requires custom code or libraries (like lodash's _.cloneDeep()) to recursively traverse and copy all nested structures. Shallow copies are simpler to create but might not provide the desired independence when dealing with nested objects or arrays.
 
+foundUser = {
+    roles: {"user": 4122}
+};
+const roles = Object.values(foundUser.roles);
+console.log(roles);
 
 
 
