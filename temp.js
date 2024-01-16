@@ -1,3 +1,4 @@
+/*
 const obj = {
     name : "Attu",
     address : "Betadur"
@@ -120,7 +121,45 @@ foundUser = {
 };
 const roles = Object.values(foundUser.roles);
 console.log(roles);
+*/
+/*
+const users = {
+    "name": "Shashidhar Angadi",
+    "roles": {
+        "user": 1980,
+        "admin": 2000
+    }
+}
+const values = Object.values(users.roles);
+console.log(values);
+const keys = Object.keys(users.roles);
+console.log(keys);
+*/
 
+/*
+//SpreadOperator vs RestOperator (...)
+const arr = [1,2,3,4];
+const newArr = [...arr,5]; //We use spread operator for expandation of array or object
+console.log(newArr);
+
+
+function getSum(...nums){ //We can send as many parameters as we want...It's useful when we don't know how many elements we are receiving then at that time we can use rest operator 
+    let total = 0;
+    console.log(nums);
+    nums.forEach((number)=>{
+        total+=number;
+    });
+    return total;
+}
+console.log(getSum(1,2,3,4,5));
+*/
+
+//Map in JavaScript
+const nums = [1,2,3,4,5];
+const newNums = nums.map((num)=>{
+    return num*2;
+})
+console.log(newNums);
 
 
 

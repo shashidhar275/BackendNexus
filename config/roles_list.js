@@ -1,5 +1,5 @@
 //For the purpose of User Roles and Permissions 
-//Keys will name of the rows 
+//Keys will name of the roles 
 //Values will be code that identifies the role
 const ROLES_LIST = {
     'Admin': 5150,
