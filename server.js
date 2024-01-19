@@ -1,4 +1,5 @@
 //It's important to note that code works like a waterfall from top to bottom 
+require('dotenv').config();  //Only for dotenv we can mention it's requirement in main server file instead in every module (Note we have to mention the other than dotenv... library requirements in their respective usage module)
 const express = require('express');
 const app = express(); //We can use other names like server but we don't..since most of them use app as variable
 const path = require('path');
@@ -8,8 +9,14 @@ const errorHandler = require('./middleware/errorHandlers'); //If we are importin
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
+const mongoose = require('mongoose');
+const connectDB = require('./config/dbConn');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
+
+//Connect to MongoDB
+connectDB();
+
 //Custom middleware logger
 app.use(logger);
 
@@ -97,4 +104,7 @@ app.all('*',(req,res)=>{ // As we are pretty much end of the page anything that 
  
 app.use(errorHandler);
 
-app.listen(PORT,()=>console.log(`Server running on port ${PORT}`));// 3rd step(For where the server should listen for the http requests) It is where the HTTP server starts listening for incoming requests on the specified port
+mongoose.connection.once('open',()=>{       //We don't want to listen for request if we don't connect to DB
+    console.log('Connected to MongoDB');
+    app.listen(PORT,()=>console.log(`Server running on port ${PORT}`));// 3rd step(For where the server should listen for the http requests) It is where the HTTP server starts listening for incoming requests on the specified port
+})

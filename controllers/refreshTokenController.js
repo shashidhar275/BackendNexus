@@ -1,18 +1,13 @@
 //We have this controller because we are going to have refreshToken route
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function (data){this.users = data}
-}
-
+const User = require('../model/User');
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
 
-const handleRefreshToken = (req,res)=>{
+const handleRefreshToken = async (req,res)=>{
     const cookies = req.cookies;
     if(!cookies?.jwt) return res.sendStatus(401); //Unauthorized //Optional chaining 
     const refreshToken = cookies.jwt;
 
-    const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
+    const foundUser = await User.findOne({ refreshToken }).exec(); // We have to put .exec() since we are using async and await 
     //Evaluate jwt
     jwt.verify(
         refreshToken,
